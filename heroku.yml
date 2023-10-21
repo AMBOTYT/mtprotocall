@@ -3,3 +3,5 @@ build:
     worker: Dockerfile
 run:
   worker: python am.py
+run:
+  worker2: python am.py
