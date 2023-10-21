@@ -64,6 +64,22 @@ async def startprivate(client, message):
     await message.reply_text(welcomed, reply_markup=joinButton)
     raise StopPropagation
 
+@Bot.on_message(filters.command("help") & filters.private)
+async def help_command(client, message):
+    await message.reply_text("""
+┏━━━━━━━━━❥
+┣•Cʀᴇᴀᴛᴏʀ  ~ @AM_YTBOTT
+┣•ᴜᴘᴅᴀᴛᴇꜱ1 ~ @AbhiModszYT_Return
+┣•ᴜᴘᴅᴀᴛᴇꜱ2 ~ @AMBOTYT
+┣•ɢʙᴀɴ ʟᴏɢꜱ ~ @Logs_Gban
+┣•ꜱᴜᴘᴘᴏʀᴛ ~ @AM_YTSupport
+┣•ᴀʙᴏᴜᴛ ᴀᴍʙᴏᴛ ~ @About_AMBot
+┗━━━━━━━━━❥
+ᴛʜɪꜱ ɪꜱ ᴍᴛᴘ ᴘʀᴏxʏ ʙᴏᴛ ꜰᴏʀ ᴛᴇʟᴇɢʀᴀᴍ.
+​🇺​​🇸​​🇪​ ​/mtp 🇹​​🇴​ ​🇬​​🇪​​🇹​ ​🇵​​🇷​​🇴​​🇽​​🇾​.
+💕 💕💕💕💕💕💕💕💕
+ᴛʜᴀɴᴋꜱ ꜰᴏʀ ᴜꜱᴇɪɴɢ ᴍᴇ :)
+    """)
 
 @Bot.on_message(filters.command("settings"))
 async def opensettings(bot, cmd):
