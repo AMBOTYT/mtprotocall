@@ -1,13 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-
-# MTProto telegram bot
-# Developed by Kourva
-# Source code: https://github.com/Kourva/MTProtoBot
-
-
-# Libraries
 import telebot  # Bot API Library
 import requests  # Internet requests
 import utils  # Bot Utilities
@@ -31,6 +21,10 @@ def start_command_handler(message: object) -> None:
     """
     Function   to   handle /start  & /restart  command
     Creates account for user and sends welcome message
+    ᴜᴘᴅᴀᴛᴇꜱ -: @AMBOTYT 
+    ᴜᴘᴅᴀᴛᴇꜱ -: @AbhiModszYT_Return
+    ꜱᴜᴘᴘᴏʀᴛ -: @AM_YTSupport
+    ɢʙᴀɴ ʟᴏɢꜱ : @Logs_Gban
     """
 
     # Search for user account that is exist or not
@@ -39,7 +33,7 @@ def start_command_handler(message: object) -> None:
         MTPbot.send_chat_action(chat_id=message.chat.id, action="typing")
         MTPbot.reply_to(
             message=message,
-            text=f"Welcome Back {message.from_user.first_name}.\nLet's chat! (Use /mtp for mtp menu).",
+            text=f"Welcome Back {message.from_user.first_name}.\nLet's chat! (Use /mtp for mtp menu).\n\nᴜᴘᴅᴀᴛᴇꜱ -: @AMBOTYT \nᴜᴘᴅᴀᴛᴇꜱ -: @AbhiModszYT_Return \nꜱᴜᴘᴘᴏʀᴛ -: @AM_YTSupport \nɢʙᴀɴ ʟᴏɢꜱ : @Logs_Gban\n\nCʀᴇᴀᴛᴏʀ  ~ @AM_YTBOTT",
         )
 
     # Continue if user is new member and create account for user
@@ -48,7 +42,7 @@ def start_command_handler(message: object) -> None:
         MTPbot.send_chat_action(chat_id=message.chat.id, action="typing")
         MTPbot.reply_to(
             message=message,
-            text=f"Welcome Dear {message.from_user.first_name}.\nLet's chat! (Use /mtp for mtp menu).",
+            text=f"Welcome Dear {message.from_user.first_name}.\nLet's chat! (Use /mtp for mtp menu).\n\nᴜᴘᴅᴀᴛᴇꜱ -: @AMBOTYT \nᴜᴘᴅᴀᴛᴇꜱ -: @AbhiModszYT_Return \nꜱᴜᴘᴘᴏʀᴛ -: @AM_YTSupport \nɢʙᴀɴ ʟᴏɢꜱ : @Logs_Gban\n\nCʀᴇᴀᴛᴏʀ  ~ @AM_YTBOTT",
         )
 
         # Initialize user account's files
@@ -62,6 +56,11 @@ def mtproto_command_handler(message: object) -> None:
     Function to handle /mtp command
     Send MTProto Proxies up to 20 at once
     Use Mtproto button in main menu options to see usage
+    ᴜᴘᴅᴀᴛᴇꜱ -: @AMBOTYT 
+    ᴜᴘᴅᴀᴛᴇꜱ -: @AbhiModszYT_Return 
+    ꜱᴜᴘᴘᴏʀᴛ -: @AM_YTSupport
+    ɢʙᴀɴ ʟᴏɢꜱ : @Logs_Gban
+    Cʀᴇᴀᴛᴏʀ  ~ @AM_YTBOTT
     """
 
     # Force chat type to private. Skip if user is Owner
@@ -199,10 +198,10 @@ def callback_query(call: object) -> None:
                     # Generate Connect & More Info button for each proxy
                     Markups = types.InlineKeyboardMarkup()
                     Markups.add(
-                        (types.InlineKeyboardButton("Connect", url=proxy_url)),
+                        (types.InlineKeyboardButton("Connect To Your Telegram", url=proxy_url)),
                         (
                             types.InlineKeyboardButton(
-                                "More Info",
+                                "More Info Proxy",
                                 callback_data=f"MtpInfo_{country}_{up}_{down}_{uptime}_{addTime}_{updateTime}_{ping}",
                             )
                         ),
@@ -250,7 +249,8 @@ def callback_query(call: object) -> None:
                 f"▋Download: {down}\n"
                 f"▋Uptime: {uptime}\n"
                 f"▋Add: {utils.time_ago(addTime)}\n"
-                f"▋Update: {utils.time_ago(updateTime)}\n",
+                f"▋Update: {utils.time_ago(updateTime)}\n"
+                f"▋Cʀᴇᴀᴛᴏʀ: @AM_YTBOTT",
                 show_alert=True,
             )
 
