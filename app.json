@@ -12,6 +12,41 @@
     "pyrogram"
     ],
     "env": {
+    "LOG_CHANNEL": {
+        "description": "A Bot's token from Botfather",
+        "value": "-1001841879487",
+        "required": true
+      },
+    "AUTH_USERS": {
+        "description": "A Bot's token from Botfather",
+        "value": "6204761408 5360305806",
+        "required": true
+      },
+    "DB_NAME": {
+        "description": "A Bot's token from Botfather",
+        "value": "mtproxy",
+        "required": true
+      },
+    "DB_URL": {
+        "description": "A Bot's token from Botfather",
+        "value": "mongodb+srv://AMBOT:AMBOT@ambot.uecutzy.mongodb.net/?retryWrites=true&w=majority",
+        "required": true
+      },
+    "BROADCAST_AS_COPY": {
+        "description": "A Bot's token from Botfather",
+        "value": "True",
+        "required": true
+      },
+     "API_ID": {
+        "description": "A Bot's token from Botfather",
+        "value": "27733303",
+        "required": true
+      },
+    "API_HASH": {
+        "description": "A Bot's token from Botfather",
+        "value": "c3c9d5e5d89c99fb8bb85a22a0cb5a26",
+        "required": true
+      },
       "BOT_TOKEN": {
         "description": "A Bot's token from Botfather",
         "value": "6629158067:AAFq4oGogsl_rndQ-VFmO1NJrrYGvaUyHOA",
