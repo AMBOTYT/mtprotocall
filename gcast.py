@@ -41,12 +41,7 @@ async def startprivate(client, message):
         if LOG_CHANNEL:
             await client.send_message(
                 LOG_CHANNEL,
-                f"""
-#NEWUSER
-New User [{message.from_user.first_name}](tg://user?id={message.from_user.id}) 
-started @{BOT_USERNAME} !!
-                
-""",
+                f"#NEW_USERS\n\n<b>┏━━━━━━━━━━━━┓</b>\n<b>┣★ 𝙉𝙚𝙬 𝙐𝙨𝙚𝙧:</b> [{message.from_user.first_name}](tg://user?id={message.from_user.id}) \n┣★ 𝘽𝙤𝙩 𝙐𝙨𝙚𝙧𝙉𝙖𝙢𝙚 : @{BOT_USERNAME}  </b>\n<b>┣★ 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 : @AM_YTBOTT</b>",
             )
         else:
             logging.info(f"#NewUser :- Name : {message.from_user.first_name} ID : {message.from_user.id}")
@@ -57,10 +52,12 @@ started @{BOT_USERNAME} !!
                 InlineKeyboardButton(
                     "SUPPORT GROUP", url="https://t.me/AM_YTSUPPORT"
                 ),
+            ],
+                [
                 InlineKeyboardButton(
                     "Cʀᴇᴀᴛᴏʀ ", url="https://t.me/AM_YTBOTT"
                 ),
-            ]
+            ],
         ]
     )
     welcomed = f"Hey <b>{message.from_user.first_name}</b>\nI'm a simple mtp.\nFunction to handle /mtp command Send MTProto Proxies up to 20 at once Use Mtproto button in main menu options to see usage.\n 🎚 use /mtp\n\nMade by @AMBOTYT"
