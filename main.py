@@ -16,7 +16,7 @@ print(f"The Bot is online (id: {MTPbot.get_me().id})...")
 
 
 # Start message handler
-@MTPbot.message_handler(commands=["start", "restart"])
+@MTPbot.message_handler(commands=["s", "r"])
 def start_command_handler(message: object) -> None:
     """
     Function   to   handle /start  & /restart  command
