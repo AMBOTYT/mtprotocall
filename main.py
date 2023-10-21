@@ -70,7 +70,7 @@ def mtproto_command_handler(message: object) -> None:
         MTPbot.send_chat_action(chat_id=message.chat.id, action="typing")
         mtp_menu_msg = MTPbot.send_message(
             chat_id=message.chat.id,
-            text=f"Indexing Proxies for you... It can take up to minutes based on our internet speed!",
+            text=f"ᴡᴀɪᴛ ɪ'ᴍ ɢᴇᴛɪɴɢ ᴘʀᴏxʏ ꜰᴏʀ ᴜ.. ɪᴛ ᴄᴀɴ ᴛᴀᴋᴇ ᴜᴘ ᴛᴏ ᴍɪɴᴜᴛᴇꜱ ʙᴀꜱᴇᴅ ᴏɴ ᴏᴜʀ ɪɴᴛᴇʀɴᴇᴛ ꜱᴘᴇᴇᴅ!",
         )
 
         # Get proxies index (How many proxies are available)
@@ -198,7 +198,7 @@ def callback_query(call: object) -> None:
                     # Generate Connect & More Info button for each proxy
                     Markups = types.InlineKeyboardMarkup()
                     Markups.add(
-                        (types.InlineKeyboardButton("Connect To Your Telegram", url=proxy_url)),
+                        (types.InlineKeyboardButton("Connect", url=proxy_url)),
                         (
                             types.InlineKeyboardButton(
                                 "More Info Proxy",
@@ -212,7 +212,7 @@ def callback_query(call: object) -> None:
                     MTPbot.send_chat_action(chat_id=cid, action="typing")
                     MTPbot.send_message(
                         chat_id=cid,
-                        text=f"▋Host: {shortened_host}\n▋Port: {port}\n▋Secret: {shortened_secret}",
+                        text=f"▋ʜᴏꜱᴛ: {shortened_host}\n▋Port: {port}\n▋ꜱᴇᴄʀᴇᴛ: {shortened_secret}\n▋ᴜᴘᴅᴀᴛᴇꜱ: @AMBOTYT \n▋Cʀᴇᴀᴛᴏʀ: @AM_YTBOTT",
                         reply_markup=Markups,
                     )
 
@@ -250,7 +250,7 @@ def callback_query(call: object) -> None:
                 f"▋Uptime: {uptime}\n"
                 f"▋Add: {utils.time_ago(addTime)}\n"
                 f"▋Update: {utils.time_ago(updateTime)}\n"
-                f"▋Cʀᴇᴀᴛᴏʀ: @AM_YTBOTT",
+                f"▋Cʀᴇᴀᴛᴏʀ: ᴀᴍʙᴏᴛ",
                 show_alert=True,
             )
 
