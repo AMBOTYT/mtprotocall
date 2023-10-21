@@ -119,7 +119,7 @@ def mtproto_command_handler(message: object) -> None:
 
         # Edit previous message and show buttons
         MTPbot.edit_message_text(
-            text=f"Currently {proxy_length} proxies are available.",
+            text=f"ᴄᴜʀʀᴇɴᴛʟʏ {proxy_length} ᴘʀᴏxɪᴇꜱ ᴀʀᴇ ᴀᴠᴀɪʟᴀʙʟᴇ.",
             chat_id=message.chat.id,
             message_id=mtp_menu_msg.message_id,
             reply_markup=Markups,
@@ -201,7 +201,7 @@ def callback_query(call: object) -> None:
                         (types.InlineKeyboardButton("Connect", url=proxy_url)),
                         (
                             types.InlineKeyboardButton(
-                                "More Info Proxy",
+                                "Info",
                                 callback_data=f"MtpInfo_{country}_{up}_{down}_{uptime}_{addTime}_{updateTime}_{ping}",
                             )
                         ),
