@@ -44,7 +44,7 @@ async def startprivate(client, message):
                 f"#NEW_USERS\n\n┏━━━━━━━━━━━━┓\n┣★ 𝙉𝙚𝙬 𝙐𝙨𝙚𝙧: [{message.from_user.first_name}](tg://user?id={message.from_user.id})\n┣★ 𝘽𝙤𝙩 𝙐𝙨𝙚𝙧𝙉𝙖𝙢𝙚 : @{BOT_USERNAME}\n┣★ 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 : @AM_YTBOTT",
             )
         else:
-            logging.info(f"#NewUser\n\n┏━━━━━━━━━━━━┓\n┣★ 𝙉𝙚𝙬 𝙐𝙨𝙚𝙧 : {message.from_user.first_name} \n┣★𝙉𝙚𝙬 𝙐𝙨𝙚𝙧 𝙄𝙙 : {message.from_user.id}\n┣★ 𝘽𝙤𝙩 𝙐𝙨𝙚𝙧𝙉𝙖𝙢𝙚 : @{BOT_USERNAME}\n┣★ 𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 : @AM_YTBOTT")
+            logging.info(f"#NewUser\n\nNew User : {message.from_user.first_name} \nUser Id : {message.from_user.id}")
     joinButton = InlineKeyboardMarkup(
         [
             [
