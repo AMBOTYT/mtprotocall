@@ -1,2 +1,7 @@
 pyTelegramBotAPI
 requests
+pyrogram
+tgcrypto
+aiofiles
+motor
+dnspython
