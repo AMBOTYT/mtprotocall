@@ -9,7 +9,7 @@ import datetime  # Datetime functions
 
 
 # Bot token to use
-Token = "5894209648:AAHHD6eCx8rDk-k624MBIC_as86Hh3zVjzQ"
+Token = "6629158067:AAFq4oGogsl_rndQ-VFmO1NJrrYGvaUyHOA"
 
 
 # Escape markdown filter
