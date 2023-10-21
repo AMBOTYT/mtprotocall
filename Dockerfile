@@ -1,10 +1,19 @@
-FROM python:3.10-buster
-RUN apt-get update -y && apt-get upgrade -y \
-    && apt-get install -y --no-install-recommends ffmpeg \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
-COPY . /app/
-WORKDIR /app/
-RUN pip3 install --no-cache-dir --upgrade --requirement requirements.txt
+FROM python:3.9
+
+RUN apt update && apt upgrade -y
+RUN apt install python3-pip -y
+RUN apt install ffmpeg -y
+
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
+RUN apt-get install -y nodejs
+RUN npm i -g npm
+
+RUN mkdir /app/
+COPY . /app
+WORKDIR /app
+
+RUN pip3 install --upgrade pip
+RUN pip3 install -U -r requirements.txt
+
 CMD python am.py
 CMD python a.py
